@@ -18,5 +18,11 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^3.0.7"
+  },
+  "dependencies": {
+    "electron-reload": "^1.4.0",
+    "fs": "0.0.1-security",
+    "jquery": "^3.3.1",
+    "serialport": "^7.1.0"
   }
 }

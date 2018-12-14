@@ -2,18 +2,28 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Bamboo printer</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-
+      <input id="textula" style="width:100%; height: 40px; border: 2px solid black; text-align: center" placeholder="type your text"/>
+      <div id='hershey_text' style="width: 1500px; height: 120px; border: 2px solid black; float:left; margin-top: 5px"></div>
+      <div id="svg_out"></div>
+      <div style="height: 50px">zeze</div>
+      <div onclick="engrave" style="
+        background: black;
+        color: white;
+        height: 50px;
+        width:100%;
+        margin-top: 25px;
+        display: flex; align-items: center; justify-content: center">
+          ENGRAVE
+      </div>
     <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
+        require('./libs/jquery.min.js');
+        require('./libs/jquery.svg.min.js');
+        require('./renderer.js');
+        require('./scripts/hershey.js');
+        require('./scripts/dom.js');
     </script>
   </body>
 </html>
