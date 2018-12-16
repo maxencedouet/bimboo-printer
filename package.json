@@ -1,5 +1,5 @@
 {
-  "name": "Bimboo printer",
+  "name": "Bimboo",
   "version": "1.0.0",
   "description": "Generate gcode from text input",
   "main": "main.js",
