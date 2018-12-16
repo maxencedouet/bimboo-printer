@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron ."
   },
-  "repository": "",
+  "repository": "https://github.com/maxencedouet/bimboo-printer.git",
   "keywords": [
     "Electron",
     "quick",
