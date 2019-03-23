@@ -34,7 +34,7 @@ function addBox() {
 
 function process(elements, power, scaleX, scaleY, translateX, translateY, translateZ, toolingSpeed, moovingSpeed) {
     let result = ''
-    result += `G90\nG1 X${-15 + translateX} Y0 Z${translateZ} F${moovingSpeed}\nS${power}\nM03\nG4 P3\nM05\nX${0 + translateX}\n`;
+    result += `G90\nG1 X${-15 + translateX} Y0 Z${translateZ} F${moovingSpeed}\nS${power}\nZ-0.2\nG4 P3\nM05\nX${0 + translateX}\n`;
 
     const paths = elements
         .filter((x)=>x.includes('path'))
@@ -60,7 +60,7 @@ function getGcode(str, scaleX, scaleY, translateX, translateY, toolingSpeed, moo
         if(array[0] === 'M') {
             const x = - (parseFloat(array[2]) + parseFloat(translate[1]) )* scaleY + translateX;
             const y = ( parseFloat(array[1]) + parseFloat(translate[0]) ) * scaleX + translateY;
-            result += `M05\nG1 X${x} Y${y} F${moovingSpeed}\nM03\n`;
+            result += `M05\nG1 X${x} Y${y} F${moovingSpeed}\nZ-0.2\n`;
         } else if (array[0] === 'L') {
             const x = - (parseFloat(array[2]) + parseFloat(translate[1]) ) * scaleY + translateX;
             const y = (parseFloat(array[1]) + parseFloat(translate[0]) ) * scaleX + translateY;

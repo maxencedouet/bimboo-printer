@@ -17,6 +17,7 @@ Hershey = function(fontName){
       let aChapeau = newObject(scope.chars[65]);
       let eUp = newObject(scope.chars[69]);
       let eDown = newObject(scope.chars[69]);
+      let eTrema = newObject(scope.chars[69]);
       let iTrema = newObject(scope.chars[73]);
       let iChapeau = newObject(scope.chars[73]);
 
@@ -34,6 +35,20 @@ Hershey = function(fontName){
           [-2, -5],
           [-3, -5]
       ])
+      eTrema.paths.push([
+          [-4, -5],
+          [-4, -4],
+          [-3, -4],
+          [-3, -5],
+          [-4, -5]
+      ])
+      eTrema.paths.push([
+          [1, -5],
+          [1, -4],
+          [2, -4],
+          [2, -5],
+          [1, -5]
+      ])
       iChapeau.paths = iChapeau.paths.slice(1)
       iChapeau.paths.push([
           [-2, -3],
@@ -42,8 +57,9 @@ Hershey = function(fontName){
       ])
 
       scope.chars[194] = aChapeau
-      scope.chars[201] = eUp
       scope.chars[200] = eDown
+      scope.chars[201] = eUp
+      scope.chars[203] = eTrema
       scope.chars[206] = iChapeau
       scope.chars[207] = iTrema
   }
