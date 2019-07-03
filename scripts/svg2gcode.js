@@ -13,8 +13,8 @@ function addBrush(elements) {
     const scaleX = 0.18;
     const scaleY = 0.25;
     const toolingSpeed = 70;
-    const translateX = 0;
-    const translateY = -10;
+    const translateX = 1;
+    const translateY = 10;
     const translateZ = 5;
 
     return process(elements, power, scaleX, scaleY, translateX, translateY, translateZ, toolingSpeed, moovingSpeed)
@@ -34,7 +34,7 @@ function addBox() {
 
 function process(elements, power, scaleX, scaleY, translateX, translateY, translateZ, toolingSpeed, moovingSpeed) {
     let result = ''
-    result += `G90\nG1 X${-15 + translateX} Y0 Z${translateZ} F${moovingSpeed}\nS${power}\nZ-0.2\nG4 P3\nM05\nX${0 + translateX}\n`;
+    result += `G90\nG1 X${-15 + translateX} Y0 Z${translateZ} F${moovingSpeed}\nS${power}\nZ-0.2\nG4 M03\n P3\nM05\nX${0 + translateX}\n`;
 
     const paths = elements
         .filter((x)=>x.includes('path'))
@@ -64,7 +64,7 @@ function getGcode(str, scaleX, scaleY, translateX, translateY, toolingSpeed, moo
         } else if (array[0] === 'L') {
             const x = - (parseFloat(array[2]) + parseFloat(translate[1]) ) * scaleY + translateX;
             const y = (parseFloat(array[1]) + parseFloat(translate[0]) ) * scaleX + translateY;
-            result += `X${x} Y${y} F${toolingSpeed}\n`;
+            result += `M03\nX${x} Y${y} F${toolingSpeed}\n`;
         }
     });
 
