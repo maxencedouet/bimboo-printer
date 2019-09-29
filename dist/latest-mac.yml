@@ -1,12 +1,12 @@
 version: 1.0.0
 files:
-  - url: electron-quick-start-1.0.0-mac.zip
-    sha512: smbiEo8GiqMz+l2i+OdCE7rK8d0uTkt1fv31tG1YFJvrwerNUS1mk2VKg4CnpxJAx996zmsXAhhDwNKL9K6N6w==
-    size: 49866348
-    blockMapSize: 53096
-  - url: electron-quick-start-1.0.0.dmg
-    sha512: ksGEfiyIX+7MMFlgXuu9tGlmpEKnLdW1fz3NFCSjpgCmFvWbqfyL8aX9RFz6kTkQnaGG/ID/kkvkQgoTmcITFA==
-    size: 51417080
-path: electron-quick-start-1.0.0-mac.zip
-sha512: smbiEo8GiqMz+l2i+OdCE7rK8d0uTkt1fv31tG1YFJvrwerNUS1mk2VKg4CnpxJAx996zmsXAhhDwNKL9K6N6w==
-releaseDate: '2018-12-14T23:55:26.978Z'
+  - url: Bimboo-1.0.0-mac.zip
+    sha512: zZR0/S/v0ZAgNsYaHfPWJe942rXuBVETiXFUwASrFxFeeV9nFzZnnxkmMRaDCHyZy1IKon+Xs8tb+AajnUC7KQ==
+    size: 50975878
+    blockMapSize: 54092
+  - url: Bimboo-1.0.0.dmg
+    sha512: PRzgBgMJjy5OUwHtirotlKN5fVWW4rPsZ+TnkbY6mRZ1NOfcu+sxuETaPbd9QnVVDkVyDRGicJlpFYj/piYwZA==
+    size: 52514825
+path: Bimboo-1.0.0-mac.zip
+sha512: zZR0/S/v0ZAgNsYaHfPWJe942rXuBVETiXFUwASrFxFeeV9nFzZnnxkmMRaDCHyZy1IKon+Xs8tb+AajnUC7KQ==
+releaseDate: '2019-09-29T18:05:05.923Z'

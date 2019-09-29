@@ -5,15 +5,41 @@
     <title>Bimboo printer</title>
   </head>
   <body>
+      <script>
+      var fuck = '';
+
+      require('./libs/jquery.min.js');
+      require('./libs/jquery.svg.min.js');
+      require('./renderer.js');
+      require('./scripts/hershey.js');
+      require('./scripts/dom.js');
+
+      const fs = require('fs');
+      const {dialog} = require('electron').remote;
+
+      function saave () {
+        var options = {
+          title: "Save file",
+          defaultPath : "output",
+          buttonLabel : "Save",
+
+          filters :[
+            {name: 'gcode', extensions: ['gcode',]},
+            {name: 'All Files', extensions: ['*']}
+           ]
+        }
+
+        dialog.showSaveDialog( options, (filename) => {
+          fs.writeFileSync(filename, fuck, 'utf-8');
+        })
+      }
+
+      </script>
+
       <input id="textula" style="width:100%; height: 40px; border: 2px solid black; text-align: center" placeholder="type your text"/>
       <div id='hershey_text' style="width: 1500px; height: 120px; border: 2px solid black; float:left; margin-top: 5px"></div>
       <div id="svg_out"></div>
-    <script>
-        require('./libs/jquery.min.js');
-        require('./libs/jquery.svg.min.js');
-        require('./renderer.js');
-        require('./scripts/hershey.js');
-        require('./scripts/dom.js');
-    </script>
+      <button onclick="saave()">Save</button>
   </body>
+
 </html>

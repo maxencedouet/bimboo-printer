@@ -26,6 +26,7 @@ function displayText(grp,text,x,y){
   });
 }
 
+var str;
 function displayTextboxContent(){
   var max_w = 1000; // (75mm / 0.28222mm/px), Inkscape's mm-per-px magic number.
   var max_h = 266;
@@ -55,13 +56,15 @@ function displayTextboxContent(){
       svg.path(scribgrp, path);
     });
   }
-  var str = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="'
+  str = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="'
             + max_w + '" height="' + max_h + '">';
   str += svg.toSVG(exportable);
   str += '</svg>';
   $('#svg_out')[0].value = str;
+
   svg2gcode(str);
 }
+
 
 function wrapLines(lines, max_w, max_h, scale){
   // TODO: split on last char if unbroken by whitespace.
