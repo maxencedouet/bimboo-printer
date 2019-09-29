@@ -5,7 +5,7 @@ function svg2gcode(svg) {
     const elements = svg.split('>');
     let result = addBrush(elements);
     result += `X${0} Y${0} Z${0} F${moovingSpeed}\n`;
-    fs.writeFile('tmp/output.gcode', result, () => {});
+    fs.writeFile('../output.gcode', result, () => {});
 }
 
 function addBrush(elements) {
