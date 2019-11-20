@@ -16,6 +16,7 @@
 
       const fs = require('fs');
       const {dialog} = require('electron').remote;
+      require('electron-reload')(__dirname);
 
       function saave () {
         var options = {

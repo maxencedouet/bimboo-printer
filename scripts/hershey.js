@@ -12,12 +12,19 @@ Hershey = function(fontName){
   this.initFont = function(){
       scope.chars = require('../hershey/data.json')
 
+      let hyphen = newObject(scope.chars[13]);
       let aChapeau = newObject(scope.chars[65]);
       let eUp = newObject(scope.chars[69]);
       let eDown = newObject(scope.chars[69]);
       let eTrema = newObject(scope.chars[69]);
       let iTrema = newObject(scope.chars[73]);
       let iChapeau = newObject(scope.chars[73]);
+
+      hyphen.paths = hyphen.paths.slice(1)
+      hyphen.paths.push([
+        [-4,4],
+        [4,4]
+      ]);
 
       aChapeau.paths.push([
           [-2, -3],
@@ -60,6 +67,7 @@ Hershey = function(fontName){
       scope.chars[203] = eTrema
       scope.chars[206] = iChapeau
       scope.chars[207] = iTrema
+      scope.chars[13] = hyphen
   }
 
   this.parse_glyph = function(data, num_points){
@@ -119,7 +127,6 @@ Hershey = function(fontName){
   }
 
   this.glyphForChar = function(ascchr){
-      console.log(ascchr.charCodeAt(0))
     return scope.chars[ascchr.charCodeAt(0) - 32];
   }
 
