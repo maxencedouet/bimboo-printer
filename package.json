@@ -1,10 +1,11 @@
 {
   "name": "Bimboo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate gcode from text input",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder -w"
   },
   "repository": "https://github.com/maxencedouet/bimboo-printer.git",
   "keywords": [
@@ -17,7 +18,8 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^3.0.7"
+    "electron": "^3.0.7",
+    "electron-builder": "^21.2.0"
   },
   "dependencies": {
     "electron-reload": "^1.5.0",
