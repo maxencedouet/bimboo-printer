@@ -1,12 +1,12 @@
 version: 1.0.1
 files:
   - url: Bimboo-1.0.1-mac.zip
-    sha512: /ua5FoZtobLHJYcWN2Tn+2exmsJC5pU2uD4TwC24bjmHLaBIQtXXnFp5l4UCgTpW7QbOzu6EJtYVekcklaf4+A==
-    size: 48660500
-    blockMapSize: 51702
+    sha512: NNHDOpp+IPY8vgrAE+eL73Y238ZLpn3a3Ts1F0Pt+rUpBXdCmI8iuZzUtl43dv0VgJ1oUgYZLE686XavXuxkpw==
+    size: 54134483
+    blockMapSize: 57894
   - url: Bimboo-1.0.1.dmg
-    sha512: MOC5kTby5IFjb+jglis8r2ulcJZhIkfhi2GiDnpYwbW5/Rmdnag3U/TGZ66jQqzqbYiyeG+UHy1yi3L+p2ue7w==
-    size: 50155297
+    sha512: URG6p9/BceBmtw8MkykCOc0tKwsCCq1MkMOVXiHxpe6azFi8LlVapqXGy6OjFDzfQrO4AC5jkJabwo/plXhIow==
+    size: 55824892
 path: Bimboo-1.0.1-mac.zip
-sha512: /ua5FoZtobLHJYcWN2Tn+2exmsJC5pU2uD4TwC24bjmHLaBIQtXXnFp5l4UCgTpW7QbOzu6EJtYVekcklaf4+A==
-releaseDate: '2019-11-20T22:15:37.160Z'
+sha512: NNHDOpp+IPY8vgrAE+eL73Y238ZLpn3a3Ts1F0Pt+rUpBXdCmI8iuZzUtl43dv0VgJ1oUgYZLE686XavXuxkpw==
+releaseDate: '2019-11-23T15:50:59.878Z'

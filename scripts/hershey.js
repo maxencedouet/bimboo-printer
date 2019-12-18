@@ -19,6 +19,13 @@ Hershey = function(fontName){
       let eTrema = newObject(scope.chars[69]);
       let iTrema = newObject(scope.chars[73]);
       let iChapeau = newObject(scope.chars[73]);
+      let gMaj= newObject(scope.chars[39]);
+      let aGrave = newObject(scope.chars[65]);
+
+      aGrave.paths.push([
+        [-2,-6],
+        [5,-3]
+      ]);
 
       hyphen.paths = hyphen.paths.slice(1)
       hyphen.paths.push([
@@ -61,6 +68,9 @@ Hershey = function(fontName){
           [3, -3]
       ])
 
+      gMaj.paths = gMaj.paths.slice(1)
+      gMaj.paths.push([[0.2295,-12.0437],[-2.0201,-11.5907],[-3.9769,-10.3899],[-5.3167,-8.5357],[-5.4933,-6.2721],[-4.3968,-4.2681],[-2.5040,-2.9637],[-0.2381,-2.7214],[2.0216,-3.1701],[4.1414,-4.0725],[6.0201,-5.4031],[7.4173,-7.2228],[7.8579,-9.4604],[7.0224,-11.5557],[4.8442,-11.9820],[2.7109,-11.1265],[0.8268,-9.7998],[-0.6979,-8.0819],[-1.7046,-6.0080],[-2.5980,-3.8805],[-3.1245,-1.6675],[-3.2668,0.6351],[-3.1161,2.9349],[-2.4422,5.1339],[-1.1364,7.0245],[0.7407,8.3485],[2.9353,9.0303],[5.2164,8.8582],[7.0578,7.5284],[7.5955,5.3350],[7.4624,3.0315],[7.6244,9.3853],[7.8655,11.6774],[8.0202,13.9797],[7.9429,16.2837],[7.2981,18.4858],[5.6756,20.0737],[3.4465,20.1180],[1.7880,18.5616],[1.0566,16.3933],[1.5108,14.1693],[3.0473,12.4730],[5.0439,11.3213],[7.0671,10.2144],[8.6940,8.7009],[10.6037,7.4478],[12.1389,5.7271]])
+
       scope.chars[194] = aChapeau
       scope.chars[200] = eDown
       scope.chars[201] = eUp
@@ -68,6 +78,8 @@ Hershey = function(fontName){
       scope.chars[206] = iChapeau
       scope.chars[207] = iTrema
       scope.chars[13] = hyphen
+      scope.chars[39] = gMaj
+      scope.chars[192] = aGrave
   }
 
   this.parse_glyph = function(data, num_points){
@@ -127,6 +139,7 @@ Hershey = function(fontName){
   }
 
   this.glyphForChar = function(ascchr){
+    console.log(ascchr.charCodeAt(0) - 32);
     return scope.chars[ascchr.charCodeAt(0) - 32];
   }
 
